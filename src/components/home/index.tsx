@@ -21,6 +21,7 @@ const HomePage = () => {
       <Header />
       <div className="h-[86vh]">
         <SearchingScreen
+          placeholder="Enter Keyword To Generate...."
           title="AI-Generated Titles, Descriptions & Tags That Rank You Higher"
           description="Want your videos seen on YouTube ? Our tool writes titles & descriptions people click ! Get on the front pages, Get more views, Get famous"
           query={query}

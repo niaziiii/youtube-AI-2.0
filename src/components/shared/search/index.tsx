@@ -12,15 +12,7 @@ const radioTypes = [
   },
 ];
 
-const SearchingScreen = ({
-  setQuery,
-  query,
-  title,
-  description,
-  setType,
-  type,
-  generateHandler,
-}: {
+interface IScreen {
   setQuery: any;
   query: any;
   title: string;
@@ -28,11 +20,25 @@ const SearchingScreen = ({
   setType: any;
   type: any;
   generateHandler: () => void;
-}) => {
+  placeholder: string;
+}
+
+const SearchingScreen = (props: IScreen) => {
+  const {
+    setQuery,
+    query,
+    title,
+    description,
+    setType,
+    type,
+    placeholder,
+    generateHandler,
+  } = props;
+
   return (
     <div className=" h-full flex-1 flex items-center justify-center z-10 text-white">
       <div className="w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]   h-full m-auto  flex flex-col items-start justify-center">
-        <div className="flex flex-wrap  ">
+        <div className="flex flex-wrap justify-center ">
           <h1 className=" capitalize text-4xl font-bold text-center">
             {title}
           </h1>
@@ -46,7 +52,7 @@ const SearchingScreen = ({
               type="search"
               id="search-dropdown"
               className="block p-4 w-full z-20 text-md text-gray-900 bg-gray-50 rounded-lg border-s-gray-50  border-gray-300 focus:ring-blue-500 focus:border-none focus:outline-none"
-              placeholder="Enter Keyword To Generate...."
+              placeholder={placeholder}
               value={query}
               onChange={(e) => setQuery(e.target.value as any)}
               required

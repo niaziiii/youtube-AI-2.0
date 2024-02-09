@@ -16,7 +16,7 @@ const links = [
   },
 ];
 
-const Header = () => {
+const Header = ({ active = null }: { active?: number | null }) => {
   return (
     <header className="  text-white z-10 h-[14vh]">
       <nav
@@ -30,11 +30,20 @@ const Header = () => {
         </div>
 
         <div className="flex lg:flex-1 gap-4 lg:justify-end">
-          {links.map((link, i: any) => (
-            <a className="font-semibold text-white" key={i} href={link.link}>
-              {link.name}
-            </a>
-          ))}
+          {links.map((link, i: any) => {
+            return (
+              <a
+                style={{
+                  color: active == i ? "#13F9D6" : "white",
+                }}
+                className={`font-semibold`}
+                key={i}
+                href={link.link}
+              >
+                {link.name}
+              </a>
+            );
+          })}
         </div>
       </nav>
     </header>
