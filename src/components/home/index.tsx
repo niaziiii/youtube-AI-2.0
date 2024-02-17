@@ -65,12 +65,12 @@ const HomePage = () => {
               </h4>
               <p className="text-center px-6 mt-6">{service.description}</p>
               <div className="flex items-center justify-center mt-6">
-                <button
-                  // onClick={generateHandler}
-                  className="w-[120px] rounded-md font-semibold py-2 bg-[#0B7666] text-white"
+                <a
+                  href={service.link}
+                  className="w-[120px] rounded-md text-center font-semibold py-2 bg-[#0B7666] text-white"
                 >
                   Generate
-                </button>
+                </a>
               </div>
             </div>
           ))}

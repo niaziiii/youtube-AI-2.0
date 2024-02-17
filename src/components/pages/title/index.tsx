@@ -11,7 +11,7 @@ import toast from "react-hot-toast";
 import LoadingSpinner from "@/components/loading";
 
 const TitlePage = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState("");
   const [type, setType] = useState<null | "Title" | "Description" | "Tags">(
     "Title"
