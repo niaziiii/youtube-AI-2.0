@@ -2,7 +2,10 @@ import React from "react";
 
 const LoadingSpinner = () => {
   return (
-    <div className="fixed top-0 left-0 w-full h-screen flex items-center justify-center backdrop-blur-[1px]">
+    <div
+      style={{ zIndex: "1000000" }}
+      className="fixed top-0 left-0 w-full h-screen flex items-center justify-center backdrop-blur-[1px]"
+    >
       <div role="status" className=" mt-28">
         <svg
           aria-hidden="true"

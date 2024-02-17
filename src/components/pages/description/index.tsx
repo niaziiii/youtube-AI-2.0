@@ -17,7 +17,7 @@ const DescriptionPage = () => {
   return (
     <div className="w-full">
       <Header active={1} />
-      <div className="h-[86vh]">
+      <div className="h-[86vh] flex items-center justify-center">
         <SearchingScreen
           placeholder="Enter Keyword To Generate Description....."
           title="AI YouTube Description Generator"

@@ -4,22 +4,36 @@ import SearchingScreen from "@/components/shared/search";
 import Header from "@/components/shared/header";
 import { homeServices } from "@/components/constant";
 import SocialItems from "@/components/social";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 const HomePage = () => {
-  const [loading, setLoading] = useState(true);
+  const { push } = useRouter();
+  const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState("");
   const [type, setType] = useState<null | "Title" | "Description" | "Tags">(
     null
   );
 
   const generateHandler = () => {
-    console.log({ type, query });
+    if (query === null || query === "") {
+      toast.error("Please enter your search query.");
+      return;
+    }
+    if (type === null) {
+      toast.error("Please select type of your query.");
+      return;
+    }
+    setLoading(true);
+    if (type === "Title") push(`/title-generator?query=${query}`);
+    if (type === "Description") push(`/description-generator?query=${query}`);
+    if (type === "Tags") push(`/tags-generator?query=${query}`);
   };
 
   return (
     <div className="w-full">
       <Header />
-      <div className="h-[86vh]">
+      <div className="h-[86vh] flex items-center justify-center">
         <SearchingScreen
           placeholder="Enter Keyword To Generate...."
           title="AI-Generated Titles, Descriptions & Tags That Rank You Higher"
@@ -29,6 +43,7 @@ const HomePage = () => {
           type={type}
           setType={setType}
           generateHandler={generateHandler}
+          loading={loading}
         />
       </div>
       {/* {loading && <LoadingSpinner />} */}

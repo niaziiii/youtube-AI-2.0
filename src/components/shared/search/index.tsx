@@ -21,6 +21,7 @@ interface IScreen {
   type: any;
   generateHandler: () => void;
   placeholder: string;
+  loading?: boolean;
 }
 
 const SearchingScreen = (props: IScreen) => {
@@ -33,10 +34,11 @@ const SearchingScreen = (props: IScreen) => {
     type,
     placeholder,
     generateHandler,
+    loading,
   } = props;
 
   return (
-    <div className=" h-full flex-1 flex items-center justify-center z-10 text-white">
+    <div className=" flex-1 flex items-center justify-center z-10 text-white">
       <div className="w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]   h-full m-auto  flex flex-col items-start justify-center">
         <div className="flex flex-wrap justify-center ">
           <h1 className=" capitalize text-4xl font-bold text-center">
@@ -79,7 +81,7 @@ const SearchingScreen = (props: IScreen) => {
               onClick={generateHandler}
               className="w-[120px] rounded-md font-semibold py-2 bg-[#0B7666] text-white"
             >
-              Generate
+              {loading ? "loading..." : "Generate"}
             </button>
           </div>
         </div>
