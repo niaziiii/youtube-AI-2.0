@@ -6,7 +6,7 @@ interface AccordionItem {
   description: string;
   questions: {
     title: string;
-    descrition: string;
+    description: string;
   }[];
 }
 
@@ -19,7 +19,7 @@ const Accordination: React.FC = () => {
 
   return (
     <div className="min-h-screen text-white flex items-center justify-center flex-col">
-      <h2 className="capitalize text-4xl font-bold text-center pb-12">FAQ's</h2>
+      <h2 className="capitalize text-4xl font-bold text-center pb-12">FAQs</h2>
 
       <div
         id="accordion-collapse"
@@ -27,7 +27,7 @@ const Accordination: React.FC = () => {
         className="w-[80%] m-auto flex flex-col gap-3"
       >
         {FAQS.map((item, i) => (
-          <div key={item.title} className="!w-[100%] m-auto">
+          <div key={i} className="!w-[100%] m-auto">
             <h2 className="" id={`accordion-collapse-heading-${i}`}>
               <button
                 type="button"
@@ -69,9 +69,9 @@ const Accordination: React.FC = () => {
               </div>
 
               <div className="text-gray-500 dark:text-gray-400 mt-8 flex flex-col gap-4">
-                {item?.questions.map((question) => {
+                {item?.questions.map((question, index) => {
                   return (
-                    <div className="flex flex-col gap-2">
+                    <div key={index} className="flex flex-col gap-2">
                       <b>{question.title}</b>
                       <p className="ml-2 text-justify">{question.descrition}</p>
                     </div>
