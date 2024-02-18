@@ -6,6 +6,8 @@ import { homeServices } from "@/components/constant";
 import SocialItems from "@/components/social";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { FAQS } from "./utils";
+import Accordination from "../accordination";
 
 const HomePage = () => {
   const { push } = useRouter();
@@ -76,6 +78,7 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+      <Accordination />
 
       <div className="min-h-screen text-white flex items-center justify-center flex-col">
         <h2 className=" capitalize text-4xl font-bold text-center pb-12">
