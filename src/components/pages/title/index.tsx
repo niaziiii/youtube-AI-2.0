@@ -9,6 +9,8 @@ import { FaCopy } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import toast from "react-hot-toast";
 import LoadingSpinner from "@/components/loading";
+import AccordinationFAQ from "@/components/accordination";
+import { FAQS } from "@/components/home/utils";
 
 const TitlePage = () => {
   const [loading, setLoading] = useState(false);
@@ -154,6 +156,9 @@ const TitlePage = () => {
             </div>
           )}
         </div>
+      </div>
+      <div>
+        <AccordinationFAQ number={0} faqs={FAQS[0]} />
       </div>
     </div>
   );

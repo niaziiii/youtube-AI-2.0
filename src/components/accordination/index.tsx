@@ -4,13 +4,13 @@ import { FAQS } from "../home/utils";
 interface AccordionItem {
   title: string;
   description: string;
-  questions: {
-    title: string;
-    description: string;
-  }[];
 }
 
-const Accordination: React.FC = () => {
+const AccordinationFAQ = (props: { faqs: any; number: number }) => {
+  const { faqs, number } = props;
+  const { title, description } = faqs;
+  const questions: AccordionItem[] = faqs.questions;
+
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -18,20 +18,23 @@ const Accordination: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen text-white flex items-center justify-center flex-col">
-      <h2 className="capitalize text-4xl font-bold text-center pb-12">FAQs</h2>
-
+    <div className=" text-white flex items-center justify-center flex-col mb-10">
+      <h2 className="capitalize text-4xl font-bold text-center pb-2">FAQs</h2>
+      <div className="w-[80%] m-auto text-center mt-4">
+        <h3 className="capitalize  text-2xl font-bold pb-2 mt-4">{title}</h3>
+        <p className=" mb-8">{description}</p>
+      </div>
       <div
         id="accordion-collapse"
         data-accordion="collapse  "
         className="w-[80%] m-auto flex flex-col gap-3"
       >
-        {FAQS.map((item, i) => (
+        {questions?.map((item, i) => (
           <div key={i} className="!w-[100%] m-auto">
             <h2 className="" id={`accordion-collapse-heading-${i}`}>
               <button
                 type="button"
-                className={`flex font-bold bg-white items-center justify-between w-full p-5 text-gray-500 border border-b-0 border-gray-200 rounded-t-[10px]   dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 ${
+                className={`flex text-justify font-bold bg-white items-center justify-between w-full p-5 text-gray-500 border border-b-0 border-gray-200 rounded-t-[10px]   dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 ${
                   openAccordion === i ? "active" : ""
                 }`}
                 onClick={() => toggleAccordion(i)}
@@ -67,17 +70,6 @@ const Accordination: React.FC = () => {
               <div className="text-gray-500 dark:text-gray-400 text-justify">
                 {item.description}
               </div>
-
-              <div className="text-gray-500 dark:text-gray-400 mt-8 flex flex-col gap-4">
-                {item?.questions.map((question, index) => {
-                  return (
-                    <div key={index} className="flex flex-col gap-2">
-                      <b>{question.title}</b>
-                      <p className="ml-2 text-justify">{question.descrition}</p>
-                    </div>
-                  );
-                })}
-              </div>
             </div>
           </div>
         ))}
@@ -86,4 +78,4 @@ const Accordination: React.FC = () => {
   );
 };
 
-export default Accordination;
+export default AccordinationFAQ;

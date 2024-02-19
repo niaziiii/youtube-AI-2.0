@@ -11,6 +11,8 @@ import { FaCopy, FaRegThumbsUp } from "react-icons/fa";
 import { MdOutlineThumbDown } from "react-icons/md";
 import { VscDebugRestart } from "react-icons/vsc";
 import { IoMdClose } from "react-icons/io";
+import AccordinationFAQ from "@/components/accordination";
+import { FAQS } from "@/components/home/utils";
 
 const TagsPage = () => {
   const [loading, setLoading] = useState(false);
@@ -188,6 +190,9 @@ const TagsPage = () => {
             </div>
           )}
         </div>
+      </div>
+      <div>
+        <AccordinationFAQ number={0} faqs={FAQS[2]} />
       </div>
     </div>
   );

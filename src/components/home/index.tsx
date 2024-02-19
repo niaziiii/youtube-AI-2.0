@@ -78,7 +78,7 @@ const HomePage = () => {
           ))}
         </div>
       </div>
-      <Accordination />
+      {/* <Accordination /> */}
 
       <div className="min-h-screen text-white flex items-center justify-center flex-col">
         <h2 className=" capitalize text-4xl font-bold text-center pb-12">
