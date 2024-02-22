@@ -15,7 +15,7 @@ const Page = () => {
           </h1>
           <p>
             If you require any more information or have any questions about our
-            site's disclaimer, please feel free to contact us by email at
+            sites disclaimer, please feel free to contact us by email at
             malikshakoor7656@gmail.com.
           </p>
           <h2 className="text-2xl mt-6 mb-2 font-bold">
@@ -36,10 +36,10 @@ const Page = () => {
             websites do not imply a recommendation for all the content found on
             these sites. Site owners and content may change without notice and
             may occur before we have the opportunity to remove a link which may
-            have gone 'bad'. Please be also aware that when you leave our
+            have gone {"bad"}. Please be also aware that when you leave our
             website, other sites may have different privacy policies and terms
             which are beyond our control. Please be sure to check the Privacy
-            Policies of these sites as well as their "Terms of Service" before
+            Policies of these sites as well as their {"Terms of Service"} before
             engaging in any business or uploading any information.
           </p>
           <h2 className="text-2xl mt-6 mb-2 font-bold">Consent</h2>

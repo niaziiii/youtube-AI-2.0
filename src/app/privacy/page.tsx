@@ -36,11 +36,11 @@ const Page = () => {
             access our Service or parts of our Service.
             <br /> <br /> * Affiliate means an entity that controls, is
             controlled by or is under common control with a party, where
-            "control" means ownership of 50% or more of the shares, equity
+            {"control"} means ownership of 50% or more of the shares, equity
             interest or other securities entitled to vote for election of
             directors or other managing authority.
-            <br /> <br /> * Company (referred to as either "the Company", "We",
-            "Us" or "Our" in this Agreement) refers to Writroai.
+            <br /> <br /> * Company (referred to as either {"the Company"},
+            {"We"}, {"Us"} or {"Our"} in this Agreement) refers to Writroai.
             <br /> <br /> * Cookies are small files that are placed on Your
             computer, mobile device or any other device by a website, containing
             the details of Your browsing history on that website among its many
@@ -77,7 +77,7 @@ const Page = () => {
             Usage Data ********** <br /> <br />
             Usage Data is collected automatically when using the Service.
             <br /> <br /> Usage Data may include information such as Your
-            Device's Internet Protocol address (e.g. IP address), browser type,
+            Devices Internet Protocol address (e.g. IP address), browser type,
             browser version, the pages of our Service that You visit, the time
             and date of Your visit, the time spent on those pages, unique device
             identifiers and other diagnostic data. When You access the Service
@@ -109,7 +109,7 @@ const Page = () => {
             those pages or opened an email and for other related website
             statistics (for example, recording the popularity of a certain
             section and verifying system and server integrity).
-            <br /> <br /> Cookies can be "Persistent" or "Session" Cookies.
+            <br /> <br /> Cookies can be {"Persistent"} or {"Session"} Cookies.
             Persistent Cookies remain on Your personal computer or mobile device
             when You go offline, while Session Cookies are deleted as soon as
             You close Your web browser. We use both Session and Persistent
@@ -149,7 +149,7 @@ const Page = () => {
             other contract with Us through the Service.
             <br /> <br /> * To contact You: To contact You by email, telephone
             calls, SMS, or other equivalent forms of electronic communication,
-            such as a mobile application's push notifications regarding updates
+            such as a mobile applications push notifications regarding updates
             or informative communications related to the functionalities,
             products or contracted services, including the security updates,
             when necessary or reasonable for their implementation.
@@ -207,7 +207,7 @@ const Page = () => {
             <br /> <br /> Transfer of Your Personal Data
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             <br /> <br /> Your information, including Personal Data, is
-            processed at the Company's operating offices and in any other places
+            processed at the Companys operating offices and in any other places
             where the parties involved in the processing are located. It means
             that this information may be transferred to — and maintained on —
             computers located outside of Your state, province, country or other
@@ -259,7 +259,7 @@ const Page = () => {
             method of electronic storage is 100% secure. While We strive to use
             commercially acceptable means to protect Your Personal Data, We
             cannot guarantee its absolute security.
-            <br /> <br /> Children's Privacy ------------------ <br /> <br />
+            <br /> <br /> Childrens Privacy ------------------ <br /> <br />
             Our Service does not address anyone under the age of 13. We do not
             knowingly collect personally identifiable information from anyone
             under the age of 13. If You are a parent or guardian and You are
@@ -269,12 +269,12 @@ const Page = () => {
             consent, We take steps to remove that information from Our servers.
             If We need to rely on consent as a legal basis for processing Your
             information and Your country requires consent from a parent, We may
-            require Your parent's consent before We collect and use that
+            require Your parents consent before We collect and use that
             information.
             <br /> <br /> Links to Other Websites -----------------------
             <br /> <br /> Our Service may contain links to other websites that
             are not operated by Us. If You click on a third party link, You will
-            be directed to that third party's site. We strongly advise You to
+            be directed to that third partys site. We strongly advise You to
             review the Privacy Policy of every site You visit. We have no
             control over and assume no responsibility for the content, privacy
             policies or practices of any third party sites or services.
@@ -284,7 +284,7 @@ const Page = () => {
             will notify You of any changes by posting the new Privacy Policy on
             this page. We will let You know via email and/or a prominent notice
             on Our Service, prior to the change becoming effective and update
-            the "Last updated" date at the top of this Privacy Policy. You are
+            the {"Last updated"} date at the top of this Privacy Policy. You are
             advised to review this Privacy Policy periodically for any changes.
             Changes to this Privacy Policy are effective when they are posted on
             this page.
