@@ -27,9 +27,10 @@ const HomePage = () => {
       return;
     }
     setLoading(true);
-    if (type === "Title") push(`/title-generator?query=${query}`);
-    if (type === "Description") push(`/description-generator?query=${query}`);
-    if (type === "Tags") push(`/tags-generator?query=${query}`);
+    if (type === "Title") push(`/ai-youtube-title-generator?query=${query}`);
+    if (type === "Description")
+      push(`/ai-youtube-description-generator?query=${query}`);
+    if (type === "Tags") push(`/ai-youtube-tags-generator?query=${query}`);
   };
 
   return (

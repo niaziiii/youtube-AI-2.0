@@ -37,11 +37,11 @@ const DescriptionPage = () => {
     }
 
     if (type === "Title") {
-      push(`/title-generator?query=${query}`);
+      push(`/ai-youtube-title-generator?query=${query}`);
       return;
     }
     if (type === "Tags") {
-      push(`/tags-generator?query=${query}`);
+      push(`/ai-youtube-tags-generator?query=${query}`);
       return;
     }
 

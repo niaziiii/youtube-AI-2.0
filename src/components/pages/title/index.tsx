@@ -34,11 +34,11 @@ const TitlePage = () => {
     }
 
     if (type === "Description") {
-      push(`/description-generator?query=${query}`);
+      push(`/ai-youtube-description-generator?query=${query}`);
       return;
     }
     if (type === "Tags") {
-      push(`/tags-generator?query=${query}`);
+      push(`/ai-youtube-tags-generator?query=${query}`);
       return;
     }
 
