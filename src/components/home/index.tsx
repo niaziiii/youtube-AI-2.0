@@ -49,11 +49,11 @@ const HomePage = () => {
         />
       </div>
       {/* {loading && <LoadingSpinner />} */}
-      <div className="min-h-screen text-white flex items-center justify-center flex-col">
-        <h2 className=" capitalize text-4xl font-bold text-center pb-12">
+      <div className="mt-10 text-white flex items-center justify-center flex-col">
+        <h2 className=" capitalize text-3xl md:text-4xl font-bold text-center pb-2">
           Services
         </h2>
-        <div className="flex items-center justify-center gap-10 mt-10">
+        <div className="flex flex-wrap items-center justify-center gap-10 mt-10">
           {homeServices.map((service) => (
             <div
               key={service.title}
@@ -80,13 +80,13 @@ const HomePage = () => {
       </div>
       {/* <Accordination /> */}
 
-      <div className="min-h-screen text-white flex items-center justify-center flex-col">
-        <h2 className=" capitalize text-4xl font-bold text-center pb-12">
+      <div className="my-20 text-white flex items-center justify-center flex-col">
+        <h2 className=" capitalize text-3xl md:text-4xl font-bold text-center pb-2">
           About Us
         </h2>
         <div className="flex flex-col items-center w-full justify-center gap-10 mt-10">
-          <div className=" w-[50%]  border rounded-md py-5">
-            <p className="text-center px-6 mt-6">
+          <div className="w-[90%] md:w-[70%] lg:w-[50%]  border rounded-md p-2 sm:p-3 lg:py-5">
+            <p className="text-center px-3 lg:px-6">
               Tired of staring at a blank YouTube title screen? Feeling lost in
               the keyword desert? Our AI isn&apos;t just a robot – it&apos;s
               your ultimate hype assistant. Imagine titles that spark instant

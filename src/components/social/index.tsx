@@ -6,7 +6,7 @@ import { FaPinterest } from "react-icons/fa";
 
 const SocialItems = () => {
   return (
-    <div className="flex items-center justify-between w-full px-8">
+    <div className="flex items-center justify-between flex-col gap-6 md:flex-row w-full px-8">
       <div className="flex items-center gap-2">
         <a
           href="https://www.facebook.com/writroai?mibextid=ZbWKwL"
@@ -33,7 +33,7 @@ const SocialItems = () => {
           <FaPinterest />
         </a>
       </div>
-      <div className="flex items-center gap-4 text-white">
+      <div className="flex flex-wrap justify-center items-center gap-4 text-white">
         <a href="/disclaimer">Disclaimer</a>
         <a href="/privacy">Privacy Policy</a>
         <a href="/terms-conditions">Terms & Conditions</a>

@@ -38,17 +38,17 @@ const SearchingScreen = (props: IScreen) => {
   } = props;
 
   return (
-    <div className=" flex-1 flex items-center justify-center z-10 text-white">
-      <div className="w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]   h-full m-auto  flex flex-col items-start justify-center">
+    <div className=" flex-1 flex items-center justify-center text-white m-auto">
+      <div className="w-full  md:w-[70%] lg:w-[60%] xl:w-[50%]   h-full m-auto  flex flex-col items-start justify-center">
         <div className="flex flex-wrap justify-center ">
-          <h1 className=" capitalize text-4xl font-bold text-center">
+          <h1 className=" capitalize text-3xl md:text-4xl font-bold text-center">
             {title}
           </h1>
           <p className="mt-6 text-sm capitalize text-center w-[80%] m-auto">
             {description}
           </p>
         </div>
-        <div className="px-2 w-full mt-6">
+        <div className="px-2  w-[90%]  m-auto mt-6">
           <div className="relative w-full">
             <input
               type="search"
