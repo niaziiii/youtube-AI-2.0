@@ -36,7 +36,7 @@ const SocialItems = () => {
       <div className="flex items-center gap-4 text-white">
         <a href="/disclaimer">Disclaimer</a>
         <a href="/privacy">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="/terms-conditions">Terms & Conditions</a>
         <a href="#">About Us</a>
       </div>
     </div>
