@@ -11,6 +11,7 @@ import toast from "react-hot-toast";
 import LoadingSpinner from "@/components/loading";
 import AccordinationFAQ from "@/components/accordination";
 import { FAQS } from "@/components/home/utils";
+import SocialItems from "@/components/social";
 
 const TitlePage = () => {
   const [loading, setLoading] = useState(false);
@@ -159,6 +160,9 @@ const TitlePage = () => {
       </div>
       <div>
         <AccordinationFAQ number={0} faqs={FAQS[0]} />
+      </div>
+      <div className="pb-10 pt-10">
+        <SocialItems />
       </div>
     </div>
   );

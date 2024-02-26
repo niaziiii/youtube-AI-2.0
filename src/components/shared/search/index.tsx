@@ -65,7 +65,7 @@ const SearchingScreen = (props: IScreen) => {
               <button
                 key={radioType.type}
                 onClick={() => setType(radioType.type)}
-                className="w-[120px] rounded-md font-semibold py-1"
+                className="w-[90px] text-sm sm:text-[16px] sm:w-[120px] rounded-md md:font-semibold py-1"
                 style={{
                   background: type === radioType.type ? "#0B7666" : "white",
                   color: type === radioType.type ? "white" : "black",

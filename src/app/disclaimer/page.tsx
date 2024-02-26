@@ -1,4 +1,5 @@
 import Header from "@/components/shared/header";
+import SocialItems from "@/components/social";
 import React from "react";
 
 const Page = () => {
@@ -53,6 +54,9 @@ const Page = () => {
             changes will be prominently posted here.
           </p>
         </div>
+      </div>
+      <div className="pb-10 pt-10">
+        <SocialItems />
       </div>
     </div>
   );

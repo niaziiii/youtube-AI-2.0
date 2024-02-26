@@ -13,6 +13,7 @@ import { FaRegThumbsUp } from "react-icons/fa6";
 import { VscDebugRestart } from "react-icons/vsc";
 import AccordinationFAQ from "@/components/accordination";
 import { FAQS } from "@/components/home/utils";
+import SocialItems from "@/components/social";
 
 const DescriptionPage = () => {
   const [loading, setLoading] = useState(false);
@@ -179,6 +180,9 @@ const DescriptionPage = () => {
       </div>
       <div>
         <AccordinationFAQ number={0} faqs={FAQS[1]} />
+      </div>
+      <div className="pb-10 pt-10">
+        <SocialItems />
       </div>
     </div>
   );

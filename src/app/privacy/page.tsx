@@ -1,4 +1,5 @@
 import Header from "@/components/shared/header";
+import SocialItems from "@/components/social";
 import React from "react";
 
 const Page = () => {
@@ -293,6 +294,9 @@ const Page = () => {
             us: <br /> <br />* By email: malikshakoor7656@gmail.com
           </p>
         </div>
+      </div>
+      <div className="pb-10 pt-10">
+        <SocialItems />
       </div>
     </div>
   );
