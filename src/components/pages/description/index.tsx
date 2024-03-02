@@ -140,7 +140,6 @@ const DescriptionPage = () => {
                   />
                 )}
 
-                <p>{description}</p>
                 <div className=" flex items-center justify-end gap-3 mt-4">
                   <p
                     className=" text-[#0B7666] cursor-pointer tooltip text-xl"

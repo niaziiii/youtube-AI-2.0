@@ -5,10 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title:
-    "AI YouTube Title, Description, and Tag Generator | Boost your YouTube SEO",
+  title: "FREE AI YouTube Title, Description, and Tag Generator",
   description:
-    "Stuck on click-worthy titles, SEO descriptions, and relevant tags?  Let our AI sidekick take the wheel!  Generate titles 2x more likely to grab attention, descriptions that boost SEO, and tags that get you discovered  – all in one click.  Get more views and watch your channel grow!  Free and easy to use!",
+    "Are you tired for writing YouTube title, description and tags? Stop! Now, you can generate seo optimized youtube title, description and tags with WritoAI.",
 };
 
 export default function RootLayout({
