@@ -8,7 +8,6 @@ import useHttp from "@/hook/use-http";
 import { FaCopy } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import toast from "react-hot-toast";
-import LoadingSpinner from "@/components/loading";
 import AccordinationFAQ from "@/components/accordination";
 import { FAQS } from "@/components/home/utils";
 import SocialItems from "@/components/social";
@@ -23,13 +22,20 @@ const TitlePage = () => {
   const [title, setTitles] = useState([]);
   const { searchTitles } = useHttp();
   const titleListingRef = useRef<HTMLDivElement>(null);
+  const [copiedTitles, setCopiedTitles] = useState<string[]>([]);
 
+  let queryClick = 1;
+  let typeClick = 1;
   const generateHandler = () => {
     if (query === null || query === "") {
+      if (queryClick > 1) return;
+      queryClick = queryClick + 1;
       toast.error("Please enter your search query.");
       return;
     }
     if (type === null) {
+      if (typeClick > 1) return;
+      typeClick = typeClick + 1;
       toast.error("Please select type of your query.");
       return;
     }
@@ -91,11 +97,13 @@ const TitlePage = () => {
     }
   }, [refQuery]);
 
-  const copyClipBoard = (value: any) => {
-    navigator.clipboard.writeText(value);
-    toast.success("The title has been copied.");
+  const copyClipBoard = (value: string) => {
+    if (!copiedTitles.includes(value)) {
+      navigator.clipboard.writeText(value);
+      setCopiedTitles((prev) => [...prev, value]);
+      toast.success("The title has been copied.");
+    }
   };
-
   const deleteTitle = (value: any) => {
     setTitles((titles) => {
       return titles.filter((t) => t !== value);
@@ -105,7 +113,6 @@ const TitlePage = () => {
 
   return (
     <div className="w-full">
-      {loading && <LoadingSpinner />}
       <Header active={0} />
       <div
         className="min-h-[86vh] flex items-center justify-center flex-col"
@@ -128,7 +135,7 @@ const TitlePage = () => {
           className="w-full flex items-center justify-center"
         >
           {title && title?.length > 0 && (
-            <div className=" bg-white p-4 my-16 w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] rounded-[10px]">
+            <div className="z-30 bg-white p-4 my-16 w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] rounded-[10px]">
               <h2 className="text-gray mb-4">Copy The Title Below </h2>
               <div className=" mx-4 mt-2 flex flex-col gap-2 transition-all duration-300 ">
                 {title.map((t: any, i: number) => (

@@ -17,12 +17,19 @@ const HomePage = () => {
     null
   );
 
+  let queryClick = 1;
+  let typeClick = 1;
+
   const generateHandler = () => {
     if (query === null || query === "") {
+      if (queryClick > 1) return;
+      queryClick = queryClick + 1;
       toast.error("Please enter your search query.");
       return;
     }
     if (type === null) {
+      if (typeClick > 1) return;
+      typeClick = typeClick + 1;
       toast.error("Please select type of your query.");
       return;
     }
@@ -49,7 +56,6 @@ const HomePage = () => {
           loading={loading}
         />
       </div>
-      {/* {loading && <LoadingSpinner />} */}
       <div className="mt-10 text-white flex items-center justify-center flex-col">
         <h2 className=" capitalize text-3xl md:text-4xl font-bold text-center pb-2">
           Services

@@ -6,7 +6,6 @@ import SearchingScreen from "@/components/shared/search";
 import { useRouter, useSearchParams } from "next/navigation";
 import useHttp from "@/hook/use-http";
 import toast from "react-hot-toast";
-import LoadingSpinner from "@/components/loading";
 import { FaCopy } from "react-icons/fa";
 import { MdOutlineThumbDown } from "react-icons/md";
 import { FaRegThumbsUp } from "react-icons/fa6";
@@ -27,12 +26,18 @@ const DescriptionPage = () => {
   const { searchDescription } = useHttp();
   const DescriptionListingRef = useRef<HTMLDivElement>(null);
 
+  let queryClick = 1;
+  let typeClick = 1;
   const generateHandler = () => {
     if (query === null || query === "") {
+      if (queryClick > 1) return;
+      queryClick = queryClick + 1;
       toast.error("Please enter your search query.");
       return;
     }
     if (type === null) {
+      if (typeClick > 1) return;
+      typeClick = typeClick + 1;
       toast.error("Please select type of your query.");
       return;
     }
@@ -67,9 +72,13 @@ const DescriptionPage = () => {
       );
     }
   };
+  let count = 1;
   const copyClipBoard = (value: any) => {
+    if (count > 1) return;
     navigator.clipboard.writeText(value);
     toast.success("The description has been copied.");
+    count = count + 1;
+    return;
   };
 
   const searchParams = useSearchParams();
@@ -104,7 +113,6 @@ const DescriptionPage = () => {
 
   return (
     <div className="w-full">
-      {loading && <LoadingSpinner />}
       <Header active={1} />
       <div
         className="min-h-[86vh] flex items-center justify-center flex-col"
@@ -127,7 +135,7 @@ const DescriptionPage = () => {
           className="w-full flex items-center justify-center"
         >
           {description && description?.length > 0 && (
-            <div className=" bg-white p-4 my-16 w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] rounded-[10px]">
+            <div className="z-30 bg-white p-4 my-16 w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] rounded-[10px]">
               <h2 className="text-gray mb-4">
                 Click Copy Button To Copy The Description{" "}
               </h2>

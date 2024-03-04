@@ -3,7 +3,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Header from "@/components/shared/header";
 import SearchingScreen from "@/components/shared/search";
-import LoadingSpinner from "@/components/loading";
 import { useRouter, useSearchParams } from "next/navigation";
 import useHttp from "@/hook/use-http";
 import toast from "react-hot-toast";
@@ -27,12 +26,18 @@ const TagsPage = () => {
   const { searchTags } = useHttp();
   const tagsListingRef = useRef<HTMLDivElement>(null);
 
+  let queryClick = 1;
+  let typeClick = 1;
   const generateHandler = () => {
     if (query === null || query === "") {
+      if (queryClick > 1) return;
+      queryClick = queryClick + 1;
       toast.error("Please enter your search query.");
       return;
     }
     if (type === null) {
+      if (typeClick > 1) return;
+      typeClick = typeClick + 1;
       toast.error("Please select type of your query.");
       return;
     }
@@ -74,9 +79,13 @@ const TagsPage = () => {
     toast.success("The tags has been removed.");
   };
 
+  let count = 1;
   const copyClipBoard = (value: any) => {
+    if (count > 1) return;
     navigator.clipboard.writeText(value);
     toast.success("The tags has been copied.");
+    count = count + 1;
+    return;
   };
 
   const searchParams = useSearchParams();
@@ -111,7 +120,6 @@ const TagsPage = () => {
 
   return (
     <div className="w-full">
-      {loading && <LoadingSpinner />}
       <Header active={2} />
       <div
         className="min-h-[86vh] flex items-center justify-center flex-col"
@@ -133,7 +141,7 @@ const TagsPage = () => {
           className="w-full flex items-center justify-center"
         >
           {tags && tags?.length > 0 && (
-            <div className=" bg-white p-4 my-16 w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] rounded-[10px]">
+            <div className="z-30 bg-white p-4 my-16 w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] rounded-[10px]">
               <h2 className="text-gray mb-4">
                 Click Copy Button To Copy The Description{" "}
               </h2>
@@ -158,7 +166,9 @@ const TagsPage = () => {
                 <div className=" flex items-center justify-end gap-3 mt-4">
                   <p
                     className=" text-[#0B7666] cursor-pointer tooltip text-xl"
-                    onClick={() => copyClipBoard(tags)}
+                    onClick={() => {
+                      copyClipBoard(tags);
+                    }}
                     data-tooltip="Copy"
                   >
                     <FaCopy />

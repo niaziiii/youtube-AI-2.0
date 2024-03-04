@@ -38,7 +38,10 @@ const SearchingScreen = (props: IScreen) => {
   } = props;
 
   return (
-    <div className=" z-20 flex-1 flex items-center justify-center text-white m-auto">
+    <div
+      style={{ zIndex: "1" }}
+      className=" z-10 flex-1 flex items-center justify-center text-white m-auto"
+    >
       <div className="w-full  md:w-[70%] lg:w-[60%] xl:w-[50%]   h-full m-auto  flex flex-col items-start justify-center">
         <div className="flex flex-wrap justify-center ">
           <h1 className=" capitalize text-3xl md:text-4xl font-bold text-center">

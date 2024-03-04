@@ -59,9 +59,9 @@ const Header = ({ active = null }: { active?: number | null }) => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M1 1h15M1 7h15M1 13h15"
             />
           </svg>
@@ -69,7 +69,9 @@ const Header = ({ active = null }: { active?: number | null }) => {
 
         <div
           className={`${
-            showHeader ? "absolute z-1000 top-[90%] w-full left-0 " : "hidden"
+            showHeader
+              ? "absolute z-1000 top-[90%] w-full left-0  z-50"
+              : "hidden"
           } lg:block lg:w-auto`}
           id="navbar-default"
         >
