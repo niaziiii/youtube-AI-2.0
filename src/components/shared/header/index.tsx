@@ -24,22 +24,9 @@ const Header = ({ active = null }: { active?: number | null }) => {
   return (
     <nav className="bg-black border-gray-200 dark:bg-gray-900 ">
       <div className=" relative flex flex-wrap items-center justify-between w-full text-white z-10  px-2 sm:px-6 md:px-12 lg:px-16">
-        {/* <a
-          href="https://flowbite.com/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Flowbite Logo"
-          />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Flowbite
-          </span>
-        </a> */}
         <div className="flex lg:flex-1">
           <a href="/" className="  text-2xl font-bold">
-            <Image width={200} height={20} src={"/logo.png"} alt="'" />
+            <Image width={200} height={20} src={"/logo.png"} alt="logo" />
           </a>
         </div>
         <button
